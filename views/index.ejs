@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Flight List</title>
+</head>
+
+<body>
+  <h1>Flight List</h1>
+  <% if(flights.length> 0){ %>
+    <ul>
+      <% flights.forEach(function(flight) { %>
+        <li>
+          <%= flight.flightNumber %> - <%= flight.source %> to <%= flight.destination %> on <%= flight.departureDate %>
+        </li>
+        <% }); %>
+    </ul>
+    <% } else { %>
+      <p>No flights added yet.</p>
+      <% } %>
+        <a href="/flights/add">Add New Flight</a>
+</body>
+
+</html>
